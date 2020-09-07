@@ -1,7 +1,7 @@
 name: Deploy Python Web App to Azure
 
 on:
-  [push, pull_request]
+  [push]
 
 env:
   AZURE_WEBAPP_NAME: python-django-web-app
