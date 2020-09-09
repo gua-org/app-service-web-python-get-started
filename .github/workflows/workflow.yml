@@ -24,24 +24,7 @@ jobs:
       uses: andstor/file-existence-action@v1
       with:
         files: "requirements.txt"
-
-    - name: Install Dependencies
-      if: steps.check_files.outputs.files_exists == 'true'
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install -r requirements.txt
         
-    - name: Install Django
-      if: steps.check_files.outputs.files_exists == 'false'
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install django==3.0.3
-        
-    - name: Build using AppService-Build
-      uses: azure/appservice-build@v2
-      with:
-        platform: python
-        platform-version: '3.8'    
     - name: Deploy web App using GH Action azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
