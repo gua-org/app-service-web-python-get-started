@@ -6,6 +6,8 @@ author: cephalin
 
 # Python sample for Azure App Service - Django
 
+This Application is compatible with Python 2.7 and does not work with Python 3
+
 This is a Python web app built on the [Django](https://www.djangoproject.com/) framework that you can deploy 
 to Azure App Service. 
 
